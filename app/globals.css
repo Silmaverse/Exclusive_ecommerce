@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @utility container{
@@ -10,5 +11,52 @@
 @theme{
 
   --font-popins:"Poppins", sans-serif;
+  --font-Inter: "Inter", sans-serif;
+  --color-brand:#DB4444;
 
+}
+.banner_slider{
+   position: relative;
+}
+
+.banner_slider  ul{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top:297px;
+    
+   display: flex !important;
+   align-items: center;
+   gap:12px;
+
+}
+
+ 
+.banner_slider  ul li button{
+   
+   font-size: 0px;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: gray;
+   opacity: 0.5;
+
+
+}
+
+.banner_slider  ul .slick-active button{
+   background-color: #DB4444;
+   border:2px solid #ffffff;
+   opacity: 1;
+   width: 14px;
+   height: 14px;
+
+}
+
+.flash_slider .slick-slider .slick-arrow{
+   width:46px;
+   height:46px;
+   border-radius: 50%;
+   background-color: #F5F5F5;
+   color: #000000;
 }

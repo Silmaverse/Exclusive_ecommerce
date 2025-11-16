@@ -2,7 +2,7 @@ import React from 'react'
 import Text from "../../utill/Text"
 
 
-const CategoryulCard = ({categoryName , Icon}) => {
+const CategoryulCard = ({categoryName , Icon, mt}) => {
   return (
     <>
 
@@ -10,7 +10,7 @@ const CategoryulCard = ({categoryName , Icon}) => {
         
         <div className="flex justify-between">
 
-            <Text variant='li' classname='list-none'> {categoryName}</Text>
+            <Text variant='li' classname={`list-none ${mt}`}> {categoryName}</Text>
             {
                 Icon && 
             <Icon className='text-2xl text-black' />
