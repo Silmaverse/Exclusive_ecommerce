@@ -13,6 +13,7 @@
   --font-popins:"Poppins", sans-serif;
   --font-Inter: "Inter", sans-serif;
   --color-brand:#DB4444;
+  --color-secondary:#00FF66;
 
 }
 .banner_slider{
@@ -93,14 +94,14 @@
    align-items: center;
    position: absolute;
    top:-60px;
-   right:28px;
+   right:116px;
    
 }
 
 .category_slider .prev-arrow{
 
    position: absolute !important;
-   right: 80px !important;
+   right: 170px !important;
 }
 
 

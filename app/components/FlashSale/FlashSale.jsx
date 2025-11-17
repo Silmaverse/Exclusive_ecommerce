@@ -13,7 +13,7 @@ const FlashSale = () => {
 
             <CommonSectionhead title={"Today’s"}/>
 
-            <div className="s_row mt-6 flex gap-[87px] items-end ">
+            <div className="s_row mt-6 flex gap-[87px] items-end mb-10 ">
 
                 <Text variant='h2' classname='text-[#000000]'>
                Flash Sales

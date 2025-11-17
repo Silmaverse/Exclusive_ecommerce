@@ -19,6 +19,9 @@ const Category = () => {
 
             <CategorySlider/>
 
+
+            <div className="w-full h-[0.5px] bg-black/30 mt-[70px]"></div>
+
            
 
         </div>

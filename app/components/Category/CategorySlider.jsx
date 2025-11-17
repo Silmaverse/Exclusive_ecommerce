@@ -37,7 +37,7 @@ const CategorySlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     prevArrow:<SamplePrevArrow/>,
     nextArrow:<SampleNextArrow/>
@@ -62,7 +62,17 @@ const CategorySlider = () => {
           <CategoryCard cardImage={Categorywatch}/>
         </div>
         <div>
-          <CategoryCard  cardImage={Categorycamera}/>
+          <CategoryCard  cardImage={Categorycamera} style={"invert"}/>
+        </div>
+        <div>
+          <CategoryCard cardImage={Categoryheadphone}/>
+        </div>
+        <div>
+          <CategoryCard cardImage={Categorygaming}/>
+        </div>
+
+           <div>
+          <CategoryCard  cardImage={Categorycamera} style={"invert"}/>
         </div>
         <div>
           <CategoryCard cardImage={Categoryheadphone}/>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 
 const CommonButton = ({ divstyle, style ,   buttontext}) => {
@@ -7,7 +8,7 @@ const CommonButton = ({ divstyle, style ,   buttontext}) => {
     <div className={`${divstyle}`}>
 
 
-    <button className={`${style} bg-brand text-base font-popins font-medium text-[#FAFAFA] `}>
+    <button className={`${style} bg-brand text-base font-popins font-medium text-[#FAFAFA]  rounded-sm`}>
         {buttontext}
 
     </button>
