@@ -4,57 +4,93 @@ import Slider from "react-slick";
 import { GrLinkPrevious } from "react-icons/gr";
 import { GrLinkNext } from "react-icons/gr";
 import FlashCard from "../FlashSale/FlashCard";
+import gameImage from "../../../public/FlashCard1.png";
+import keyboardImage from "@/public/flashcard2.png"
+import MonitorImage from "@/public/flashcard3.png"
+import chair from "../../../public/flash4.png"
 
 
 const FlashSlider = () => {
+
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+  return (
+    <button
+      className={`${className} custom-arrow prev-arrow`}  onClick={onClick}> <GrLinkPrevious className="text-2xl text-black"/></button>
+    
+  );
+}
+
+ function SampleNextArrow(props) {
+
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={`${className} custom-arrow`} onClick={onClick}> <GrLinkNext className="text-2xl text-black"/></button>
+    
+  );
+}
+
+
+
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    
+    prevArrow:<SamplePrevArrow/>,
+    nextArrow:<SampleNextArrow/>
   
   };
+
+
+
+
+
+
+
 
   return (
     <>
       <div className="slider-container flash_slider ">
         <Slider {...settings}>
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={gameImage} />
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={keyboardImage} />
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard  cardImage={MonitorImage}/>
           </div>
 
           <div className="relative">
-            <FlashCard />
+            <FlashCard  cardImage={chair}/>
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={gameImage} />
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={keyboardImage} />
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={MonitorImage}/>
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={chair}/>
           </div>
 
           <div className=" relative">
-            <FlashCard />
+            <FlashCard cardImage={gameImage} />
           </div>
         </Slider>
       </div>

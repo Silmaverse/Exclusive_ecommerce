@@ -2,15 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiEye } from "react-icons/fi";
-import gameImage from "../../../public/FlashCard1.png";
 import { FaStar } from "react-icons/fa";
 import Text from "../../utill/Text";
 
-const FlashCard = () => {
+const FlashCard = ({cardImage}) => {
   return (
     <>
       <div className="card w-[270px] h-[350px]">
-        <div className="image w-[270px] h-[250px] bg-[#F5F5F5] relative flex justify-center items-center">
+        <div className="image w-[270px] h-[250px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
           <div
             className="w-[55px] h-[26px] bg-brand text-[12px] font-popins font-normal absolute top-4 left-6
              text-white flex justify-center items-center"
@@ -28,11 +27,11 @@ const FlashCard = () => {
             </div>
           </div>
 
-          <Image src={gameImage} alt="error" />
+          <Image src={cardImage} alt="error" />
 
           <button
-            className="absolute top-[209px] opacity-0 hover:opacity-100  w-full h-[41px] text-base font-popins font-medium
-             text-white bg-[#000000] transition duration-300 ease-in-out "
+            className="absolute top-[250px]  group-hover:top-[210px] w-full h-[41px] text-base font-popins font-medium
+             text-white bg-[#000000]  transition-all duration-300 ease-in-out  "
           >
             Add To Cart
           </button>
