@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { IoChevronDownOutline } from "react-icons/io5";
 import Text from '../../utill/Text'

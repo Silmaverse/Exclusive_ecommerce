@@ -63,12 +63,13 @@ const ProductsSlider = () => {
           </div>
 
           <div className="relative">
-            <CommonCard
+            <CommonCard 
               cardImage={car}
               newarrival={"NEW"}
               cartbtn={"Add To Cart"}
               cardtitle={"Kids Electric Car"}
               actualprice={"$960"}
+              colorvalues={["#FB1314" ,"#FB1314"]}
               stock={"65"}
             />
           </div>
@@ -89,6 +90,7 @@ const ProductsSlider = () => {
               cartbtn={"Add To Cart"}
               cardtitle={"Jr. Zoom Soccer Cleats"}
               actualprice={"$1160"}
+              colorvalues={["#EEFF61" ,"#FB1314"]}
               stock={"35"}
             />
           </div>
@@ -110,6 +112,7 @@ const ProductsSlider = () => {
               cartbtn={"Add To Cart"}
               cardtitle={"GP11 Shooter USB Gamepad"}
               actualprice={"$660"}
+              colorvalues={["#000000" ,"#FB1314"]}
               stock={"55"}
             />
           </div>

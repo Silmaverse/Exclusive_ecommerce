@@ -18,7 +18,7 @@ const CommonCard = ({
 }) => {
   return (
     <>
-      <div className="card w-[270px] h-[350px]">
+      <div className="card w-[270px] ">
         <div className="image w-[270px] h-[250px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
           {discount && (
             <div

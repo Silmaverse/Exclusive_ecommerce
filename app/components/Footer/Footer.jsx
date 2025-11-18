@@ -1,8 +1,10 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import logo from "@/public/Logo.png"
 import Text from "../../utill/Text"
 import { LuSendHorizontal } from "react-icons/lu";
+import { IoMdArrowUp } from "react-icons/io";
 import Footerlist from "../Footer/Footerlist"
 import Qrcode from "@/public/Qr Code.png"
 import Googleplay from "@/public/GooglePlay.png"
@@ -10,9 +12,18 @@ import appStore from "@/public/appstore.png"
 import FooterIcon from "@/app/components/Footer/FooterIcon"
 
 const Footer = () => {
+
+
+    const handleup=()=>{
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }
+
   return (
     <>
-    <footer className='mt-35 bg-black py-20'>
+    <footer className='mt-35 bg-black py-20 relative'>
 
         <div className="container">
 
@@ -82,6 +93,11 @@ const Footer = () => {
 
       </div>
        </div>
+
+       <button onClick={handleup} className="absolute right-6 -top-14 w-[46px] h-[46px] rounded-full bg-[#F5F5F5] flex justify-center items-center">
+           <IoMdArrowUp className='text-2xl text-black'/>
+
+       </button>
 
     </footer>
     
