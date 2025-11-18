@@ -31,7 +31,7 @@ const Text = ({ variant = "p", classname = " ", children }) => {
     },
     {
       tag: "li",
-      class: "text-base font-popins font-normal text-[#000000]",
+      class: "text-base font-popins font-normal text-[#000000] list-none",
     },
   ];
 

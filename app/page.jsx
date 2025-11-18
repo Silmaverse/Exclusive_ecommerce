@@ -5,6 +5,9 @@ import Category from "@/app/components/Category/Category"
 import BestSelling from "@/app/components/BestSelling/BestSelling"
 import Experience from "@/app/components/Experince/Experience"
 import Products from "@/app/components/Products/Products"
+import Newarrival from "@/app/components/NewArrival/Newarrival"
+import Delivery from "@/app/components/Delivery/Delivery"
+import Footer from "@/app/components/Footer/Footer"
 
 
 const page = () => {
@@ -16,6 +19,9 @@ const page = () => {
     <BestSelling/>
     <Experience/>
     <Products/>
+    <Newarrival/>
+    <Delivery/>
+    <Footer/>
     
     </>
   )

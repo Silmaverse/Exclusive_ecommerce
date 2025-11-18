@@ -67,15 +67,15 @@
    justify-content: center;
    align-items: center;
    position: absolute;
-   top:-60px;
-   right:28px;
+   top:-90px;
+   right:116px;
    
 }
 
 .flash_slider .prev-arrow{
 
    position: absolute !important;
-   right: 80px !important;
+   right: 176px !important;
 }
 
 
@@ -93,16 +93,16 @@
    justify-content: center;
    align-items: center;
    position: absolute;
-   top:-60px;
-   right:116px;
+   top:-90px;
+   right:82px;
    
 }
 
 .category_slider .prev-arrow{
 
    position: absolute !important;
-   right: 170px !important;
+   right: 132px !important;
 }
 
 
-
+        
