@@ -7,7 +7,6 @@ import Experience from "@/app/components/Experince/Experience"
 import Products from "@/app/components/Products/Products"
 import Newarrival from "@/app/components/NewArrival/Newarrival"
 import Delivery from "@/app/components/Delivery/Delivery"
-import Footer from "@/app/components/Footer/Footer"
 
 
 const page = () => {
@@ -21,7 +20,7 @@ const page = () => {
     <Products/>
     <Newarrival/>
     <Delivery/>
-    <Footer/>
+   
     
     </>
   )

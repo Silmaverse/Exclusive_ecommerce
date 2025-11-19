@@ -10,7 +10,6 @@ const Carddetails = ({
   stock,
   colorvalues,
 }) => {
-  const [clik, setclik] = useState(false);
   const [selected, setSelected] = useState(null);
 
 
@@ -71,11 +70,11 @@ const Carddetails = ({
                       {
                         isActive ?(
                           <div
-                        className={`w-3 h-3 bg-[${item}] rounded-full`}
+                        className={`w-3 h-3 ${item} rounded-full`}
                       ></div>
   
                         ):(<div
-                        className={`w-3 h-3 bg-[${item}] rounded-full`}
+                        className={`w-5 h-5 ${item} rounded-full`}
                       ></div>)
                       }
                       
