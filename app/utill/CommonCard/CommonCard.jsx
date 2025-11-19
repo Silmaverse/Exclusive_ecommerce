@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
+import Link from 'next/link'
 import Image from "next/image";
 import { FiEye } from "react-icons/fi";
 import Carddetails from "../CommonCard/Carddetails";
@@ -39,9 +40,9 @@ const CommonCard = ({
               <IoMdHeartEmpty className="text-2xl text-black" />
             </div>
 
-            <div className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center">
+            <Link href={"/productDetails"} className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center">
               <FiEye className="text-2xl text-black" />
-            </div>
+            </Link>
           </div>
 
           <Image src={cardImage} alt="error" />

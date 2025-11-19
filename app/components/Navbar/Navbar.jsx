@@ -40,9 +40,9 @@ const Navbar = () => {
             <div className="navrow pt-10 pb-4 flex justify-between items-center ">
 
 
-            <div className="logo relative w-[118px] h-6">
-                <Image src={logo} alt='logo_error' fill={true}/>
-            </div>
+            <Link href={"/"} className="logo relative w-[118px] h-6" style={{backgroundImage:`url(${logo.src})`}}>
+                {/* <Image src={logo} alt='logo_error' fill={true}/> */}
+            </Link>
 
             <NavItem/>
             <NavIcon/>
