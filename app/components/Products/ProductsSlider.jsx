@@ -13,7 +13,7 @@ import shoe from "../../../public/shoe.png";
 import game from "../../../public/game.png";
 import jumper from "../../../public/jumper.png";
 
-const ProductsSlider = () => {
+const ProductsSlider = ({products}) => {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -48,119 +48,29 @@ const ProductsSlider = () => {
     nextArrow: <SampleNextArrow />,
   };
 
+
+
   return (
     <>
       <div className="slider-container flash_slider">
         <Slider {...settings}>
-          <div className=" relative">
+
+          {
+            products.map((item)=>(
+
+            <div className=" relative">
             <CommonCard
-              cardImage={dogfood}
+              cardImage={item.thumbnail}
               cartbtn={"Add To Cart"}
-              cardtitle={"Breed Dry Dog Food"}
-              actualprice={"$100"}
-              stock={"35"}
-            />
+              cardtitle={item.title}
+              actualprice={item.price}
+              stock={item.stock}
+              />
           </div>
+            ))
 
-          <div className="relative">
-            <CommonCard 
-              cardImage={car}
-              newarrival={"NEW"}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Kids Electric Car"}
-              actualprice={"$960"}
-              colorvalues={["bg-[#FB1314]" ,"bg-[#DB4444]"]}
-              stock={"65"}
-            />
-          </div>
+            }
 
-          <div className=" relative">
-            <CommonCard
-              cardImage={camera}
-              cartbtn={"Add To Cart"}
-              cardtitle={"CANON EOS DSLR Camera"}
-              actualprice={"$360"}
-              stock={"95"}
-            />
-          </div>
-
-          <div className="relative">
-            <CommonCard
-              cardImage={shoe}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Jr. Zoom Soccer Cleats"}
-              actualprice={"$1160"}
-              colorvalues={["bg-[#EEFF61]" ,"bg-[#DB4444]"]}
-              stock={"35"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={laptop}
-              cartbtn={"Add To Cart"}
-              cardtitle={"ASUS FHD Gaming Laptop"}
-              actualprice={"$700"}
-              stock={"325"}
-            />
-          </div>
-
-          <div className="relative">
-            <CommonCard
-              cardImage={game}
-              newarrival={"NEW"}
-              cartbtn={"Add To Cart"}
-              cardtitle={"GP11 Shooter USB Gamepad"}
-              actualprice={"$660"}
-              colorvalues={["bg-[#000000]" ,"bg-[#DB4444]"]}
-              stock={"55"}
-            />
-          </div>
-
-          <div className="relative">
-            <CommonCard
-              cardImage={productSet}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Curology Product Set "}
-              actualprice={"$500"}
-              stock={"145"}
-            />
-          </div>
-
-          <div className="relative">
-            <CommonCard
-              cardImage={jumper}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Quilted Satin Jacket"}
-              colorvalues={["bg-[#184A48]" ,"bg-[#DB4444]"]}
-              actualprice={"$660"}
-              stock={"55"}
-            />
-          </div>
-
-
-          <div className="relative">
-            <CommonCard
-              cardImage={productSet}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Curology Product Set "}
-              actualprice={"$500"}
-              stock={"145"}
-            />
-          </div>
-
-          <div className="relative">
-            <CommonCard
-              cardImage={jumper}
-              cartbtn={"Add To Cart"}
-              cardtitle={"Quilted Satin Jacket"}
-              actualprice={"$660"}
-              stock={"55"}
-            />
-          </div>
-
-
-          
         </Slider>
       </div>
     </>

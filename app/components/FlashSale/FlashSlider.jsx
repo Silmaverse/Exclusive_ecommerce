@@ -44,19 +44,16 @@ const FlashSlider = ({products}) => {
     nextArrow: <SampleNextArrow />,
   };
 
-  console.log(products)
 
   return (
     <>
       <div className="slider-container flash_slider ">
         <Slider {...settings}>
-          <div className=" relative">
 
             {
               products.map((item)=>(
-
-
-                <div className="">
+                
+                <div className=" relative">
 
                  <CommonCard
               cardImage={item.thumbnail}
@@ -67,13 +64,13 @@ const FlashSlider = ({products}) => {
               actualprice={item.price}
               stock={item.stock}
               />
-              </div>
+            
 
+            </div>
               ))
             }
  
            
-          </div>
 
         </Slider>
       </div>

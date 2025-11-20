@@ -5,7 +5,9 @@ import CommonCard from "../../utill/CommonCard/CommonCard";
 const Flashdatafetch =async () => {
 
 
-    const res = await fetch ("https://dummyjson.com/products");
+    const res = await fetch ("https://dummyjson.com/products",{
+      cache:'no-store'
+    });
 
     const data =await res.json()
 

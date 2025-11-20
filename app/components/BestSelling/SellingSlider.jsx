@@ -9,7 +9,7 @@ import bag from "@/public/bag.png";
 import grammabox from "@/public/grammabox.png";
 import table from "../../../public/table.png";
 
-const SellingSlider = () => {
+const SellingSlider = ({products}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -19,48 +19,30 @@ const SellingSlider = () => {
     arrows: false,
   };
 
+  
+
   return (
     <>
       <div className="slider-container  ">
         <Slider {...settings}>
-          <div className=" relative">
-            <CommonCard
-              cardImage={shirt}
-              cardtitle={"The north coat"}
-              disprice={"$260"}
-              actualprice={"$360"}
-              stock={"65"}
-            />
-          </div>
+          {
 
-          <div className=" relative">
-            <CommonCard
-              cardImage={bag}
-              cardtitle={"Gucci duffle bag"}
-              disprice={"$960"}
-              actualprice={"$1160"}
-              stock={"65"}
-            />
-          </div>
+            products.map((item)=>(
 
-          <div className=" relative">
+            <div className=" relative">
             <CommonCard
-              cardImage={grammabox}
-              cardtitle={"RGB liquid CPU Cooler"}
-              disprice={"$160"}
-              actualprice={"$170"}
-              stock={"65"}
-            />
+              cardImage={item.thumbnail}
+              cardtitle={item.title}
+              disprice={item.discountPercentage}
+              actualprice={item.price}
+              stock={item.stock}
+              />
           </div>
+            ))
 
-          <div className="relative">
-            <CommonCard
-              cardImage={table}
-              cardtitle={"Small BookSelf"}
-              disprice={"$360"}
-              stock={"65"}
-            />
-          </div>
+          }
+
+          
         </Slider>
       </div>
     </>

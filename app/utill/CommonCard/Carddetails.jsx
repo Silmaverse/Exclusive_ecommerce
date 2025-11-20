@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Text from "../Text";
 import Star from "../Star";
+import { DiGroovy } from "react-icons/di";
 
 const Carddetails = ({
   cardtitle,
@@ -24,10 +25,10 @@ const Carddetails = ({
             {" "}
             <div className="flex justify-between my-2 ">
               <Text variant="p" classname="text-brand">
-                {disprice}
+                ${disprice}
               </Text>
               <Text variant="p" classname="text-black/50 line-through">
-                {actualprice}
+                ${actualprice}
               </Text>
             </div>
             <div className="flex gap-2 items-center">
@@ -41,7 +42,7 @@ const Carddetails = ({
         ) : (
           <div className="flex gap-0.5 items-center mt-2">
             <Text variant="p" classname="text-brand">
-              {actualprice}
+              ${actualprice}
             </Text>
             <div className="flex gap-2 items-center ">
               <Star />
@@ -59,35 +60,27 @@ const Carddetails = ({
             colorvalues.map((item, id) => {
 
                const isActive = selected === id;
-              return (
-                <>
-                  { 
-               
+              return(
                     <div onClick={()=>setSelected(id)}
                       key={id}
                       className={`w-5 h-5 rounded-full  ${isActive?"border-2":"border-none"}   ${isActive?"border-black":""} flex justify-center items-center`}
                     >
-                      
                       {
                         isActive ?(
-                          <div key={id}
+                          <DiGroovy
                         className={`w-3 h-3 ${item} rounded-full`}
-                      ></div>
+                      ></DiGroovy>
   
-                        ):(<div key={id}
+                        ):(<div 
                         className={`w-5 h-5 ${item} rounded-full`}
                       ></div>)
                       }
                       
                     </div>
+              )
 
-                   
                   
-                  }
-
-                </>
-
-              );
+                
 
             })}
 

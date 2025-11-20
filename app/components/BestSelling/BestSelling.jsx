@@ -1,5 +1,5 @@
 import React from "react";
-import SellingSlider from "../../components/BestSelling/SellingSlider";
+import BestSellingdatafetch from "../BestSelling/BestSellingdatafetch"
 import CommonSectionhead from "@/app/utill/CommonSectionhead";
 import Text from "@/app/utill/Text";
 import CommonButton from "@/app/utill/CommonButton";
@@ -22,7 +22,7 @@ const BestSelling = () => {
             />
           </div>
 
-          <SellingSlider />
+          <BestSellingdatafetch />
         </div>
       </section>
     </>
