@@ -45,13 +45,14 @@ const CommonCard = ({
             </Link>
           </div>
 
-          <Image src={cardImage} alt="error" />
+          <Image src={cardImage} alt="error" fill={true}/>
 
           {cartbtn && (
             <button className="absolute top-[250px]  group-hover:top-[210px] w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  ">
               {cartbtn}
             </button>
           )}
+          
         </div>
 
         <Carddetails cardtitle={cardtitle} disprice={disprice} actualprice={actualprice} stock={stock} colorvalues={colorvalues}/>

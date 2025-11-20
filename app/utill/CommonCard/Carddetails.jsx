@@ -10,6 +10,7 @@ const Carddetails = ({
   stock,
   colorvalues,
 }) => {
+  
   const [selected, setSelected] = useState(null);
 
 
@@ -69,11 +70,11 @@ const Carddetails = ({
                       
                       {
                         isActive ?(
-                          <div
+                          <div key={id}
                         className={`w-3 h-3 ${item} rounded-full`}
                       ></div>
   
-                        ):(<div
+                        ):(<div key={id}
                         className={`w-5 h-5 ${item} rounded-full`}
                       ></div>)
                       }

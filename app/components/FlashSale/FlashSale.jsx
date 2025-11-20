@@ -4,6 +4,7 @@ import Time from "../FlashSale/Time"
 import FlashSlider from "../../components/FlashSale/FlashSlider"
 import CommonSectionhead from "../../utill/CommonSectionhead"
 import CommonButton from "@/app/utill/CommonButton"
+import Flashdatafetch from "@/app/components/FlashSale/Flashdatafetch"
 
 const FlashSale = () => {
   return (
@@ -26,7 +27,7 @@ const FlashSale = () => {
             </div>
 
             <div className="sale_product">
-              <FlashSlider />
+              <Flashdatafetch/>
             </div>
 
             <CommonButton  style={"w-[234px] h-[56px] mt-[51px] mb-[60px]"} buttontext={"View All Products"} divstyle={"text-center"}/>

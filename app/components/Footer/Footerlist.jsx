@@ -12,9 +12,9 @@ const Footerlist = ({listhead ,listnames , style}) => {
     <div className={`flex  flex-col gap-4 ${style}`}>
     {
         
-        listnames.map((item)=>{
+        listnames.map((item , id)=>{
             
-            return <Text variant='li' classname='text-[#FAFAFA]'>{item}</Text>
+            return <Text key={id} variant='li' classname='text-[#FAFAFA]'>{item}</Text>
         })
     }
 
