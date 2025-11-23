@@ -10,7 +10,7 @@ import MonitorImage from "@/public/flashcard3.png";
 import chair from "../../../public/flash4.png";
 
 
-const RelatedItems = () => {
+const RelatedItems = ({products ,category}) => {
     function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -43,117 +43,34 @@ const RelatedItems = () => {
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
   };
+
+  const samecategoryProduct= products.filter((item)=> (item.category == category))
+
+  console.log(samecategoryProduct)
+
   return (
     <>
      <div className="slider-container flash_slider ">
         <Slider {...settings}>
-          <div className=" relative">
-            <CommonCard
-              cardImage={gameImage}
-              cardtitle={"HAVIT HV-G92 Gamepad"}
-              discount={"-40%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$120"}
-              actualprice={"$160"}
-              stock={"88"}
-            />
-          </div>
+
+          {
+            samecategoryProduct.map((item)=>(
 
           <div className=" relative">
             <CommonCard
-              cardImage={keyboardImage}
-              cardtitle={"AK-900 Wired Keyboard"}
-              discount={"-35%"}
+              cardImage={item.thumbnail}
+              cardtitle={item.title}
+              discount={item.discountPercentage}
               cartbtn={" Add To Cart"}
-              disprice={"$960"}
-              actualprice={"$1160"}
-              stock={"75"}
+              disprice={item.discountPercentage}
+              actualprice={item.price}
+              stock={item.stock}
             />
           </div>
+            ))
+          }
 
-          <div className=" relative">
-            <CommonCard
-              cardImage={MonitorImage}
-              cardtitle={"IPS LCD Gaming Monitor"}
-              discount={"-30%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$370"}
-              actualprice={"$400"}
-              stock={"99"}
-            />
-          </div>
 
-          <div className="relative">
-            <CommonCard
-              cardImage={chair}
-              cardtitle={"S-Series Comfort Chair "}
-              discount={"-25%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$375"}
-              actualprice={"$400"}
-              stock={"99"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={gameImage}
-              cardtitle={"HAVIT HV-G92 Gamepad"}
-              discount={"-40%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$120"}
-              actualprice={"$160"}
-              stock={"88"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={gameImage}
-              cardtitle={"HAVIT HV-G92 Gamepad"}
-              discount={"-40%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$120"}
-              actualprice={"$160"}
-              stock={"88"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={chair}
-              cardtitle={"S-Series Comfort Chair "}
-              discount={"-25%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$375"}
-              actualprice={"$400"}
-              stock={"99"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={keyboardImage}
-              cardtitle={"AK-900 Wired Keyboard"}
-              discount={"-35%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$960"}
-              actualprice={"$1160"}
-              stock={"75"}
-            />
-          </div>
-
-          <div className=" relative">
-            <CommonCard
-              cardImage={MonitorImage}
-              cardtitle={"IPS LCD Gaming Monitor"}
-              discount={"-30%"}
-              cartbtn={" Add To Cart"}
-              disprice={"$370"}
-              actualprice={"$400"}
-              stock={"99"}
-            />
-          </div>
         </Slider>
       </div>
     </>

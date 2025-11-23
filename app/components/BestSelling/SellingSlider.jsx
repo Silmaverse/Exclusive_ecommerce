@@ -36,6 +36,7 @@ const SellingSlider = ({products}) => {
               disprice={item.discountPercentage}
               actualprice={item.price}
               stock={item.stock}
+              id={item.id}
               />
           </div>
             ))

@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+
+
+  
   
 };
 

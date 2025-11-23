@@ -65,6 +65,7 @@ const ProductsSlider = ({products}) => {
               cardtitle={item.title}
               actualprice={item.price}
               stock={item.stock}
+              id={item.id}
               />
           </div>
             ))

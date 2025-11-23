@@ -10,7 +10,7 @@ import bigimage from "../../../public/bigimage.png"
 const productImage = ({images , thumbnail}) => {
 
 
-    const[allImags ,setImages] =useState([thumbnail])
+    const[allImags ,setImages] =useState(thumbnail)
 
 
    
@@ -30,7 +30,7 @@ const productImage = ({images , thumbnail}) => {
 
                 <div className="w-[121px] h-[114px] relative ">
 
-                <Image src={item} alt='err' fill={true}/>
+                <Image src={item} alt='err' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
                 </div>
             </button>
                 ))
@@ -41,7 +41,7 @@ const productImage = ({images , thumbnail}) => {
     
         <div className="w-[500px] h-[600px] bg-[#F5F5F5] flex justify-center items-center rounded-sm">
             <div className="w-[446px] h-[315px] relative">
-                <Image src={thumbnail} alt='err' fill={true}/>
+                <Image src={allImags} alt='err' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
 
             </div>
         </div>

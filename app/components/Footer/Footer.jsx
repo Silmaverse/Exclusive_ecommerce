@@ -31,7 +31,7 @@ const Footer = () => {
 
         <div className="first-col">
             <div className="logo relative w-[118px] h-6 invert">
-                <Image src={logo} alt='logo_error' fill={true}/>
+                <Image src={logo} alt='logo_error' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
             </div>
 
             <h3 className='text-xl font-medium font-popins text-[#FAFAFA]! my-6'>Subscribe</h3>

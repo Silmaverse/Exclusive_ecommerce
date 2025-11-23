@@ -4,10 +4,6 @@ import Slider from "react-slick";
 import { GrLinkPrevious } from "react-icons/gr";
 import { GrLinkNext } from "react-icons/gr";
 import CommonCard from "../../utill/CommonCard/CommonCard";
-import gameImage from "../../../public/FlashCard1.png";
-import keyboardImage from "@/public/flashcard2.png";
-import MonitorImage from "@/public/flashcard3.png";
-import chair from "../../../public/flash4.png";
 
 const FlashSlider = ({products}) => {
 

@@ -4,9 +4,10 @@ import ProductInfo from './productInfo'
 import Commonsectionhead from "../../utill/CommonSectionhead"
 import RelatedItems from './RelatedItems'
 
-const productdetails = ({product}) => {
+const productdetails = ({product ,allproduct}) => {
 
   console.log(product)
+
 
 
   return (
@@ -18,7 +19,7 @@ const productdetails = ({product}) => {
     <ProductInfo title={product.title}  reviews={product.reviews.rating} actualprice={product.price} description={product.description} />
     </div>
      <Commonsectionhead title={"Related Item"} style={"mb-15"}/>
-     <RelatedItems />
+     <RelatedItems products={allproduct} category={product.category} />
   
     </>
   )

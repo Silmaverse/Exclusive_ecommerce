@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Accountbreadcrumbs = () => {
+const Accountbreadcrumbs = ({category ,title}) => {
   return (
     <>
     <div className="flex gap-3 items-center mb-20">
@@ -13,12 +13,12 @@ const Accountbreadcrumbs = () => {
         </div>
 
         <div className="flex gap-[4.6px]">
-          <Link href={"/"} className='text-base font-normal font-popins text-black/50' >Gaming</Link>
+          <Link href={"/"} className='text-base font-normal font-popins text-black/50' >{category}</Link>
           <span className='text-black/50 '>/</span>
         </div>
 
          <div className="flex gap-[4.6px]">
-          <Link href={"/"} className='text-base font-normal font-popins text-black' >Havic HV G-92 Gamepad</Link>
+          <Link href={"/"} className='text-base font-normal font-popins text-black' >{title}</Link>
           
         </div>
 

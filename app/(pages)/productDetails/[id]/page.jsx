@@ -1,17 +1,20 @@
 import React from 'react'
-import Accountbreadcrumbs from '../../../utill/Breadcrumbs/Accountbreadcrumbs'
 import Productfetch from '../../../components/productdetails/productfetch'
 
-const page = () => {
+const page = async ({params}) => {
+
+  const {id} =await params
+
+
   return (
     <>
     <section className='mt-20'>
 
       <div className="container">
 
-       <Accountbreadcrumbs/>
+       
 
-       <Productfetch/>
+       <Productfetch id={id} />
 
 
       </div>
