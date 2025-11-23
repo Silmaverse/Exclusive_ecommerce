@@ -7,6 +7,7 @@ import { FiEye } from "react-icons/fi";
 import Carddetails from "../CommonCard/Carddetails";
 
 const CommonCard = ({
+  id,
   cardImage,
   discount,
   cartbtn,
@@ -40,7 +41,7 @@ const CommonCard = ({
               <IoMdHeartEmpty className="text-2xl text-black" />
             </div>
 
-            <Link href={"/productDetails"} className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center">
+            <Link href={`/productDetails/${id}`} className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center">
               <FiEye className="text-2xl text-black z-2" />
             </Link>
           </div>

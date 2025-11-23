@@ -63,6 +63,7 @@ const FlashSlider = ({products}) => {
               disprice={item.discountPercentage}
               actualprice={item.price}
               stock={item.stock}
+              id={item.id}
               />
             
 

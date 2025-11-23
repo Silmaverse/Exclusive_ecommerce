@@ -1,6 +1,6 @@
 import React from 'react'
-import Accountbreadcrumbs from '../../utill/Breadcrumbs/Accountbreadcrumbs'
-import Productdetails from '../../components/productdetails/productdetails'
+import Accountbreadcrumbs from '../../../utill/Breadcrumbs/Accountbreadcrumbs'
+import Productfetch from '../../../components/productdetails/productfetch'
 
 const page = () => {
   return (
@@ -11,7 +11,7 @@ const page = () => {
 
        <Accountbreadcrumbs/>
 
-       <Productdetails/>
+       <Productfetch/>
 
 
       </div>

@@ -6,23 +6,22 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { GiRecycle } from "react-icons/gi";
 
 
-const productInfo = () => {
+const productInfo = ({title ,reviews ,actualprice ,description}) => {
   return (
     <>
     <div className="">
 
-        <Text variant='h2' classname='text-2xl!'>Havic HV G-92 Gamepad</Text>
+        <Text variant='h2' classname='text-2xl!'>{title}</Text>
         <div className="flex gap-2 mt-4 items-center">
             <Star/>
-            <Text variant='h5'classname='text-black/50!' >(150 Reviews)</Text>
+            <Text variant='h5'classname='text-black/50!' >({reviews})</Text>
             <span className='text-black/50'>|</span>
              <Text variant='h5'classname=' !text-[#00FF66]' >In Stock</Text>
         </div>
-         <Text variant='h5'classname='text-2xl! text-black! mt-4 mb-6'>$192.00</Text>
+         <Text variant='h5'classname='text-2xl! text-black! mt-4 mb-6'>${actualprice}</Text>
 
          <div className="w-[373px]">
-             <Text variant='h5'classname='!text-black' >PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free
-                 install & mess free removal Pressure sensitive.</Text>
+             <Text variant='h5'classname='!text-black' >{description}</Text>
          </div>
 
          <div className="w-full h-0.5 bg-black/30 my-6"></div>
