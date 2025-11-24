@@ -4,6 +4,7 @@ import banner from "../../../public/Banner.png"
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BannerSlider = () => {
 
@@ -26,25 +27,25 @@ const BannerSlider = () => {
      <div className="slider-container banner_slider  w-[892px] h-[344px] pt-[34px]">
       <Slider {...settings}>
 
-        <div className=' relative'>
+        <Link href={"/allproduct"} className=' relative'>
           <Image src={banner} alt='err'  />
-        </div>
+        </Link>
         
-        <div className=' relative'>
+        <Link href={'/allproduct'} className=' relative'>
           <Image src={banner} alt='err'  />
-        </div>
+        </Link>
 
-        <div className=' relative'>
+        <Link href={'/allproduct'} className=' relative'>
           <Image src={banner} alt='err' />
-        </div>
+        </Link>
 
-        <div className='relative'>
+        <Link href={"/allproduct"} className='relative'>
           <Image src={banner} alt='err' />
-        </div>
+        </Link>
 
-        <div className=' relative'>
+        <Link href={"/allproduct"} className=' relative'>
           <Image src={banner} alt='err' />
-        </div>
+        </Link>
 
       
       </Slider>

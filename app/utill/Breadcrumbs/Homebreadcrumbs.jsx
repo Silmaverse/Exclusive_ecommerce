@@ -7,7 +7,7 @@ const Homebreadcrumbs = () => {
   return (
     <>
 
-     <div className="flex gap-3 items-start mb-20">
+     <div className="flex gap-3 items-start my-20">
 
 
         <div className="flex gap-[4.6px] items-center">

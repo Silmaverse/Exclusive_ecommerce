@@ -64,6 +64,7 @@ const ProductsSlider = ({products}) => {
               cartbtn={"Add To Cart"}
               cardtitle={item.title}
               actualprice={item.price}
+              newarrival={"NEW"}
               stock={item.stock}
               id={item.id}
               />
