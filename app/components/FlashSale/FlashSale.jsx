@@ -30,7 +30,7 @@ const FlashSale = () => {
               <Flashdatafetch/>
             </div>
 
-            <CommonButton  style={"w-[234px] h-[56px] mt-[51px] mb-[60px]"} buttontext={"View All Products"} divstyle={"text-center"}/>
+            <CommonButton  style={"w-[234px] h-[56px] mt-[51px] mb-[60px] mx-auto"} buttontext={"View All Products"} divstyle={" w-full"}/>
 
 
             <div className="w-full h-[0.5px] bg-black/30"></div>

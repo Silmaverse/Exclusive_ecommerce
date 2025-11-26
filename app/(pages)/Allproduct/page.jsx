@@ -4,21 +4,17 @@ import Allproduct from '../../components/Allproduct/Allproduct'
 import LimitSkip from '../../components/Allproduct/LimitSkip'
 
 
-const page =async ({searchparams}) => {
-
-  const limit = Number(searchparams?.limit) || 10
-  const skip = Number(searchparams?.skip) || 0
-   
-   
-
-    console.log(searchparams)
+const page =async ({searchParams}) => {
+    
+    const value= await searchParams; 
+    console.log(value)
 
   
   return (
     <>
 
     <Homebreadcrumbs/>
-    <Allproduct limit={limit} skip={skip} />
+    <Allproduct value={value} />
     <LimitSkip  />
     </>
   )

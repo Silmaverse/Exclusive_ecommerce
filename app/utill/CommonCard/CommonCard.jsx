@@ -20,8 +20,8 @@ const CommonCard = ({
 }) => {
   return (
     <>
-      <div className="card w-[270px] ">
-        <div className="image w-[270px] h-[250px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
+      <div className="card w-[300px]   ">
+        <div className="image w-[300px]  h-[300px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
           {discount && (
             <div
               className="w-[55px] h-[26px] bg-brand text-[12px] font-popins font-normal absolute top-4 left-6
@@ -46,10 +46,10 @@ const CommonCard = ({
             </Link>
           </div>
 
-          <Image src={cardImage} loading="eager" alt="error" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+          <Image src={cardImage} loading="eager" objectFit="cover"  alt="error" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
 
           {cartbtn && (
-            <button className="absolute top-[250px]  group-hover:top-[210px] w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  ">
+            <button className="absolute -bottom-12  group-hover:bottom-0 w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  ">
               {cartbtn}
             </button>
           )}

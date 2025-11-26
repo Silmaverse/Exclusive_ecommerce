@@ -15,7 +15,7 @@ const Products = () => {
 
             <Productsfetch/>
 
-            <CommonButton buttontext={"View All Products"} style={"w-[236px] h-[56px] mt-15"} divstyle={"text-center"}/>
+            <CommonButton buttontext={"View All Products"} style={"w-[236px] h-[56px] mt-15 mx-auto"} divstyle={"w-full"}/>
 
         </div>
 

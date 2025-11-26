@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import React from 'react'
 
 const CommonButton = ({ divstyle, style ,   buttontext}) => {
@@ -8,10 +9,10 @@ const CommonButton = ({ divstyle, style ,   buttontext}) => {
     <div className={`${divstyle}`}>
 
 
-    <button className={`${style} bg-brand text-base font-popins font-medium text-[#FAFAFA]  rounded-sm`}>
+    <Link href={"/Allproduct"} className={`${style} flex justify-center items-center bg-brand text-base font-popins font-medium text-[#FAFAFA]  rounded-sm`}>
         {buttontext}
 
-    </button>
+    </Link>
     </div>
     
     
