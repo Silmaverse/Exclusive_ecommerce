@@ -4,6 +4,7 @@ import React from 'react'
 const Accountbreadcrumbs = ({category ,title}) => {
   return (
     <>
+    <div className="container">
     <div className="flex gap-3 items-center mb-20">
 
 
@@ -24,6 +25,7 @@ const Accountbreadcrumbs = ({category ,title}) => {
 
 
 
+    </div>
     </div>
     
     </>

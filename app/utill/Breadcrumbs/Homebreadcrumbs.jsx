@@ -6,6 +6,9 @@ import { IoHomeOutline } from "react-icons/io5";
 const Homebreadcrumbs = () => {
   return (
     <>
+    
+    <div className="container">
+
 
      <div className="flex gap-3 items-start my-20">
 
@@ -22,6 +25,7 @@ const Homebreadcrumbs = () => {
 
       
 
+    </div>
     </div>
 
     </>
