@@ -3,7 +3,7 @@ import React from 'react'
 import { IoHomeOutline } from "react-icons/io5";
 
 
-const Homebreadcrumbs = () => {
+const Homebreadcrumbs = ({title}) => {
   return (
     <>
     
@@ -19,7 +19,7 @@ const Homebreadcrumbs = () => {
         </div>
 
         <div className="">
-          <Link href={"#"} className='text-xl font-normal font-popins text-black' >All product</Link>
+          <Link href={"#"} className='text-xl font-normal font-popins text-black' >{title}</Link>
         
         </div>
 

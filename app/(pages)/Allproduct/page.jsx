@@ -13,7 +13,7 @@ const page =async ({searchParams}) => {
   return (
     <>
 
-    <Homebreadcrumbs/>
+    <Homebreadcrumbs title={"All product"}/>
     <Allproduct value={value} />
     <LimitSkip  />
     </>

@@ -12,7 +12,7 @@ const Experience = () => {
             <div className="experience_row w-full h-[550px]" style={{backgroundImage:`url(${Expereiencebanner.src})` 
             ,backgroundPosition:"center" ,backgroundSize:"cover" ,backgroundRepeat:"no-repeat"  }}>
 
-                <CommonButton style={"w-[171px] h-[56px] !bg-secondary text-base font-medium font-popins text-white mt-[420px] ml-[56px]"} buttontext={"Buy Now!"}/>
+                <CommonButton divstyle={"pt-[3px] pl-[5px]"} style={"w-[171px] h-[56px] !bg-secondary text-base font-medium font-popins text-white mt-[420px] ml-[56px]"} buttontext={"Buy Now!"}/>
 
             </div>
            

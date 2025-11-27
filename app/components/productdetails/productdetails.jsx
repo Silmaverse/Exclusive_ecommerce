@@ -4,9 +4,23 @@ import ProductInfo from './productInfo'
 import Commonsectionhead from "../../utill/CommonSectionhead"
 import RelatedItems from './RelatedItems'
 
-const productdetails = ({product ,allproduct}) => {
+const productdetails =async ({product ,allproductCategory}) => {
 
   console.log(product)
+
+  const category= allproductCategory.filter((item)=> (item === product.category))
+
+  console.log(category)
+
+  const sameCategoryproductlist =await fetch(`https://dummyjson.com/products/category/${category}`,{
+    cache:"no-store"
+  })
+
+  const samecategoryproduct = await sameCategoryproductlist.json()
+
+
+ console.log(samecategoryproduct)
+
 
 
 
@@ -19,7 +33,7 @@ const productdetails = ({product ,allproduct}) => {
     <ProductInfo title={product.title}  reviews={product.reviews.rating} actualprice={product.price} description={product.description} />
     </div>
      <Commonsectionhead title={"Related Item"} style={"mb-15"}/>
-     <RelatedItems products={allproduct} category={product.category} />
+     <RelatedItems sameproductlist={samecategoryproduct}  />
   
     </>
   )

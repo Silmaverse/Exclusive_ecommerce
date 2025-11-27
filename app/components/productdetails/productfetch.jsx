@@ -11,16 +11,16 @@ const productfetch = async({id}) => {
     const data =await res.json()
 
 
-    const allproduct = await fetch("https://dummyjson.com/products",{
+    const allproductCategory = await fetch("https://dummyjson.com/products/category-list",{
       cache:"no-store"
 
     })
 
-    const allpdata= await allproduct.json()
+    const allpdataCategory= await allproductCategory.json()
 
     console.log(data)
 
-    console.log(allpdata)
+    console.log(allpdataCategory)
 
 
 
@@ -28,7 +28,7 @@ const productfetch = async({id}) => {
 
     <>
     <Accountbreadcrumbs category={data.category} title={data.title}/>
-     <Productdetails product={data} allproduct={allpdata.products}/>
+     <Productdetails product={data} allproductCategory={allpdataCategory}/>
     
     </>
   )
