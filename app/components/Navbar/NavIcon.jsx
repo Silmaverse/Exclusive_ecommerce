@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { GoSearch } from "react-icons/go";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoCartOutline  } from "react-icons/io5";
@@ -19,10 +20,10 @@ const NavIcon = () => {
                 </div>
                       <div className="flex gap-4 ">
 
-                            <IoMdHeartEmpty className='text-2xl' />
+                          <Link href={"/wishlist"}>  <IoMdHeartEmpty className='text-2xl' /></Link>
 
       
-                            <IoCartOutline  className='text-2xl'/>
+                            <Link href={"/cartdetails"}   > <IoCartOutline  className='text-2xl'/></Link>
                            
                       </div>
 

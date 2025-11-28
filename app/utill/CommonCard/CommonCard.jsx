@@ -46,7 +46,7 @@ const CommonCard = ({
             </Link>
           </div>
 
-          <Image src={cardImage} loading="eager" objectFit="cover"  alt="error" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+          <Image src={cardImage} loading="eager" objectFit="cover"  alt="error" width={300} height={300} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
 
           {cartbtn && (
             <Link href={"/cartdetails"} className="absolute -bottom-12 flex justify-center items-center group-hover:bottom-0 w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  ">

@@ -7,15 +7,23 @@
 
 }
 
-
 @theme{
 
   --font-popins:"Poppins", sans-serif;
   --font-Inter: "Inter", sans-serif;
   --color-brand:#DB4444;
   --color-secondary:#00FF66;
-
 }
+/* input hide css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 .banner_slider{
    position: relative;
 }

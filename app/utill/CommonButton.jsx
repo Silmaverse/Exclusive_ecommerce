@@ -9,7 +9,7 @@ const CommonButton = ({ divstyle, style ,   buttontext}) => {
     <div className={`${divstyle}`}>
 
 
-    <Link href={"/Allproduct"} className={`${style} flex justify-center items-center bg-brand text-base font-popins font-medium text-[#FAFAFA]  rounded-sm`}>
+    <Link href={"/allproduct"} className={`${style} flex justify-center items-center bg-brand text-base font-popins font-medium text-[#FAFAFA]  rounded-sm`}>
         {buttontext}
 
     </Link>

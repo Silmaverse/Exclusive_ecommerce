@@ -27,23 +27,23 @@ const BannerSlider = () => {
      <div className="slider-container banner_slider  w-[892px] h-[344px] pt-[34px]">
       <Slider {...settings}>
 
-        <Link href={"/Allproduct"} className=' relative'>
+        <Link href={"/allproduct"} className=' relative'>
           <Image src={banner} alt='err'  />
         </Link>
         
-        <Link href={'/Allproduct'} className=' relative'>
+        <Link href={'/allproduct'} className=' relative'>
           <Image src={banner} alt='err'  />
         </Link>
 
-        <Link href={'/Allproduct'} className=' relative'>
+        <Link href={'/allproduct'} className=' relative'>
           <Image src={banner} alt='err' />
         </Link>
 
-        <Link href={"/Allproduct"} className='relative'>
+        <Link href={"/allproduct"} className='relative'>
           <Image src={banner} alt='err' />
         </Link>
 
-        <Link href={"/Allproduct"} className=' relative'>
+        <Link href={"/allproduct"} className=' relative'>
           <Image src={banner} alt='err' />
         </Link>
 
