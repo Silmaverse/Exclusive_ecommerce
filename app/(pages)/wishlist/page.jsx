@@ -11,6 +11,8 @@ const page = () => {
   return (
     <>
     <section id='wishlist' className='mt-20'>
+      <div className="container">
+
         <Wishlisthead/>
         <div className="flex justify-between items-center mt-15 mb-20">
            <WishlistCard discount={"40"} cartImg={flash1} cardtitle={"Gucci duffle bag"} disprice={960} actualprice={1160} cartbtn={"Add To Cart"} deletbtn={"yes"}/>
@@ -27,6 +29,7 @@ const page = () => {
           <WishlistCard cartImg={flash1} cardtitle={"Gucci duffle bag"} disprice={960} actualprice={1160} stock={65} cartbtn={"Add To Cart"} eye={"yes"}/>
           <WishlistCard cartImg={flash1} newarrival={"yes"} cardtitle={"Gucci duffle bag"} disprice={960} actualprice={1160} stock={65} cartbtn={"Add To Cart"} eye={"yes"}/>
           <WishlistCard cartImg={flash1} cardtitle={"Gucci duffle bag"} disprice={960} actualprice={1160} stock={65} cartbtn={"Add To Cart"} eye={"yes"}/>
+      </div>
         </div>
     </section>
     </>

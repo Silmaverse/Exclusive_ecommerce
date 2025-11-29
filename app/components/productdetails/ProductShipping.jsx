@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Text from "../../utill/Text"
 import { CiDeliveryTruck } from "react-icons/ci";

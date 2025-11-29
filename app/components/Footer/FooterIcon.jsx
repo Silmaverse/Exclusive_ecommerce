@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { RiFacebookLine } from "react-icons/ri";
 import { TfiTwitter } from "react-icons/tfi";

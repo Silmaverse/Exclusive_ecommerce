@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,7 +8,7 @@ const Accountbreadcrumbs = ({category ,title, myaccount , product , viewcart , c
 
   return (
     <>
-    <div className="container">
+  
     <div className="flex gap-3 items-center mb-20">
 
 
@@ -19,7 +20,7 @@ const Accountbreadcrumbs = ({category ,title, myaccount , product , viewcart , c
         {
           myaccount &&
         <div className="flex gap-[4.6px]">
-          <Link href={"/"} className='text-base font-normal font-popins text-black/50' >{myaccount}</Link>
+          <Link href={"/account"} className='text-base font-normal font-popins text-black/50' >{myaccount}</Link>
           <span className='text-black/50 '>/</span>
         </div>
         }
@@ -68,7 +69,7 @@ const Accountbreadcrumbs = ({category ,title, myaccount , product , viewcart , c
 
 
     </div>
-    </div>
+    
     
     </>
   )

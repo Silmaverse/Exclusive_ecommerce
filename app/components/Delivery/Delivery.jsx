@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { CiDeliveryTruck } from "react-icons/ci";
 import { MdOutlineHeadsetMic } from "react-icons/md";

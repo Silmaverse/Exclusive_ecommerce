@@ -12,7 +12,7 @@ const LimitSkip = () => {
     console.log(current , pagesize)
     const skip =(current -1) *pagesize
     console.log(skip)
-    router.replace(`/Allproduct?limit=${pagesize}&skip=${skip}`)
+    router.replace(`/allproduct?limit=${pagesize}&skip=${skip}`)
     router.refresh();
   }
 

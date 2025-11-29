@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Text from "../../utill/Text"
 import Star from "../../utill/Star"

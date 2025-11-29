@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { MdDone } from "react-icons/md";
 import Form from "next/form"

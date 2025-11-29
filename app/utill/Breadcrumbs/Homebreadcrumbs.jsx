@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import React from 'react'
 import { IoHomeOutline } from "react-icons/io5";
@@ -6,9 +7,6 @@ import { IoHomeOutline } from "react-icons/io5";
 const Homebreadcrumbs = ({title}) => {
   return (
     <>
-    
-    <div className="container">
-
 
      <div className="flex gap-3 items-start my-20">
 
@@ -26,7 +24,7 @@ const Homebreadcrumbs = ({title}) => {
       
 
     </div>
-    </div>
+   
 
     </>
   )

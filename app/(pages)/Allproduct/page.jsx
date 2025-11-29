@@ -12,10 +12,14 @@ const page =async ({searchParams}) => {
   
   return (
     <>
+     <section className='allproduct'>
+      <div className="container">
 
-    <Homebreadcrumbs title={"All product"}/>
-    <Allproduct value={value} />
-    <LimitSkip  />
+          <Homebreadcrumbs title={"All product"}/>
+          <Allproduct value={value} />
+          <LimitSkip  />
+      </div>
+      </section>
     </>
   )
 }

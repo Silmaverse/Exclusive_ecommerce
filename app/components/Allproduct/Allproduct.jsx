@@ -18,8 +18,7 @@ const Allproduct = async({value}) => {
 
   return (
     <>
-    <section className='allproduct'>
-      <div className="container">
+ 
 
         <div className="flex flex-wrap gap-20">
 
@@ -31,9 +30,7 @@ const Allproduct = async({value}) => {
             }
 
             </div>
-        </div>
-
-    </section>
+        
     </>
   )
 }
