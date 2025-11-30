@@ -29,7 +29,7 @@ const Accountfrom = () => {
             </div>
         </div>
         <div className="">
-        <lable className="text-base font-popins font-normal mb-2">Address</lable>
+        <lablel className="text-base font-popins font-normal mb-2">Address</lablel>
             <div className="w-[330px] h-[50px] bg-[#F5F5F5] py-[13px] pl-4">
                 <input type='text' placeholder='Kingston, 5236, United State' className='text-base font-popins font-normal'/>
             </div>

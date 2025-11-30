@@ -3,6 +3,12 @@ import React from "react";
 import Sideimg from "../../../public/Story.png"
 import Image from "next/image";
 import Text from "../../utill/Text";
+import { CiShop } from "react-icons/ci";
+import { CiDollar } from "react-icons/ci";
+import { FaSackDollar } from "react-icons/fa6";
+import { IoBag } from "react-icons/io5";
+import Aboutdetails from "../../components/About/Aboutdetails";
+import StaffSlider from "./StaffSlider";
 
 const About = () => {
   return (
@@ -33,6 +39,17 @@ const About = () => {
 
          
       </div>
+      <div className="flex justify-between items-center">
+
+       <Aboutdetails Icon={CiShop} sales={"10.5k"} salestitle={"Sallers active our site"}/>
+       <Aboutdetails Icon={CiDollar} sales={"33k"} salestitle={"Mopnthly Produduct Sale"}/>
+       <Aboutdetails Icon={IoBag } sales={"45.5kk"} salestitle={"Customer active in our site"}/>
+       <Aboutdetails Icon={FaSackDollar} sales={"25k"} salestitle={"Anual gross sale in our site"}/>
+      </div>
+      <div className="mt-[140px]">
+        <StaffSlider/>
+      </div>
+
     </>
   );
 };

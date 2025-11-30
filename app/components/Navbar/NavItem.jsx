@@ -17,13 +17,15 @@ const NavItem = () => {
               Home
             </Text>
           </Link>
+          <Link href={"/Contact"}>
           <Text
             variant="li"
             classname="hover:underline transition duration-300 ease-in-out"
-          >
+            >
             {" "}
             Contact
           </Text>
+            </Link>
           <Link href={"/About"}>
             <Text
               variant="li"

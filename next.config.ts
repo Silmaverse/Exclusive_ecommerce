@@ -12,9 +12,7 @@ const nextConfig: NextConfig = {
     ],
   },
 
-
-
-  
+ 
   
 };
 

@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
-import Link from 'next/link'
+import Link from "next/link";
 import Image from "next/image";
 import { FiEye } from "react-icons/fi";
 import Carddetails from "../CommonCard/Carddetails";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import { Slide, toast } from "react-toastify";
 
 const CommonCard = ({
   id,
@@ -18,9 +21,57 @@ const CommonCard = ({
   newarrival,
   colorvalues,
 }) => {
+  const router = useRouter();
+
+  function randomNumber() {
+    let num = Math.floor(Math.random() * 30) + 1;
+    return num;
+  }
+  Cookies.remove("userId")
+
+  let productsarray = [];
+
+  const handleAdd = (productId) => {
+    router.push("/cartdetails");
+    console.log(productId);
+    Cookies.set("userId", randomNumber(), { expires: 7 });
+
+    const myproduct = {
+      pid: productId,
+      quantity: 1,
+    };
+    productsarray.push(myproduct);
+
+    fetch("https://dummyjson.com/carts/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: Cookies.get("userId"),
+        products: productsarray,
+      }),
+    })
+      .then((res) => res.json())
+      .then(
+        toast.success("Cart Added Successfully!", {
+          position: "top-right",
+          autoClose: 1200,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Slide,
+        })
+      )
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
+      
       <div className="card w-[300px]   ">
+        
         <div className="image w-[300px]  h-[300px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
           {discount && (
             <div
@@ -41,23 +92,40 @@ const CommonCard = ({
               <IoMdHeartEmpty className="text-2xl text-black" />
             </div>
 
-            <Link href={`/productDetails/${id}`} className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center">
+            <Link
+              href={`/productDetails/${id}`}
+              className="w-[34px] h-[34px] bg-white rounded-full  flex justify-center items-center"
+            >
               <FiEye className="text-2xl text-black z-2" />
             </Link>
           </div>
 
-          <Image src={cardImage} loading="eager" objectFit="cover"  alt="error" width={300} height={300} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+          <Image
+            src={cardImage}
+            loading="eager"
+            alt="error"
+            width={300}
+            height={300}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
 
           {cartbtn && (
-            <Link href={"/cartdetails"} className="absolute -bottom-12 flex justify-center items-center group-hover:bottom-0 w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  ">
+            <button
+              onClick={() => handleAdd(id)}
+              className="absolute -bottom-12 flex justify-center items-center group-hover:bottom-0 w-full h-[41px] text-base font-popins font-medium text-white bg-[#000000]  transition-all duration-300 ease-in-out  "
+            >
               {cartbtn}
-            </Link>
+            </button>
           )}
-          
         </div>
 
-        <Carddetails cardtitle={cardtitle} disprice={disprice} actualprice={actualprice} stock={stock} colorvalues={colorvalues}/>
-
+        <Carddetails
+          cardtitle={cardtitle}
+          disprice={disprice}
+          actualprice={actualprice}
+          stock={stock}
+          colorvalues={colorvalues}
+        />
       </div>
     </>
   );

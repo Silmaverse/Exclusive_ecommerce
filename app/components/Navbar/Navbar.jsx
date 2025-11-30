@@ -7,6 +7,7 @@ import Image from 'next/image';
 import logo from "@/public/Logo.png"
 import NavItem from "@/app/components/Navbar/NavItem"
 import NavIcon from "../../components/Navbar/NavIcon"
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -14,7 +15,8 @@ const Navbar = () => {
   return (
     <>
     <nav className='border-b border-black/30'>
-
+   <ToastContainer/>
+   
         <div  id='first_section' className="bg-black py-[15px] flex justify-center items-center gap-[231px]">
             <div className="flex gap-2">
 

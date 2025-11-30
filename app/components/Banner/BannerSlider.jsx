@@ -28,23 +28,23 @@ const BannerSlider = () => {
       <Slider {...settings}>
 
         <Link href={"/allproduct"} className=' relative'>
-          <Image src={banner} alt='err'  />
+          <Image src={banner} loading='eager' alt='err'  />
         </Link>
         
         <Link href={'/allproduct'} className=' relative'>
-          <Image src={banner} alt='err'  />
+          <Image src={banner} loading='eager' alt='err'  />
         </Link>
 
         <Link href={'/allproduct'} className=' relative'>
-          <Image src={banner} alt='err' />
+          <Image src={banner} loading='eager' alt='err' />
         </Link>
 
         <Link href={"/allproduct"} className='relative'>
-          <Image src={banner} alt='err' />
+          <Image src={banner} loading='eager' alt='err' />
         </Link>
 
         <Link href={"/allproduct"} className=' relative'>
-          <Image src={banner} alt='err' />
+          <Image src={banner} loading='eager' alt='err' />
         </Link>
 
       
