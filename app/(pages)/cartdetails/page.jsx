@@ -15,8 +15,8 @@ const page = () => {
         <div className="container">
           <Homebreadcrumbs title={"Cart"}/>
           <Cardhead/>
-          <Carddetails carImg={lcdCart} carttitle={"LCD Monitor"} price={650} quantity={1} totalprice={650} />
-           <Carddetails carImg={gamecart} carttitle={"H1 Gamepad"} price={550} quantity={2} totalprice={1100} />
+          <Carddetails  />
+          
            <Cartbtn/>
            <Carttotal/>
         </div>

@@ -21,20 +21,19 @@ const CommonCard = ({
   newarrival,
   colorvalues,
 }) => {
-  const router = useRouter();
 
   function randomNumber() {
     let num = Math.floor(Math.random() * 30) + 1;
     return num;
   }
-  Cookies.remove("userId")
+ 
 
   let productsarray = [];
 
+  Cookies.set("userId", randomNumber(), { expires: 1});
   const handleAdd = (productId) => {
-    router.push("/cartdetails");
+   
     console.log(productId);
-    Cookies.set("userId", randomNumber(), { expires: 7 });
 
     const myproduct = {
       pid: productId,
@@ -65,6 +64,8 @@ const CommonCard = ({
         })
       )
       .catch((err) => console.log(err));
+
+
   };
 
   return (
