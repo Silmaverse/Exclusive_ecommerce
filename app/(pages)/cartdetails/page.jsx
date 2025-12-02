@@ -17,8 +17,6 @@ const page = () => {
           <Cardhead/>
           <Carddetails  />
           
-           <Cartbtn/>
-           <Carttotal/>
         </div>
 
     </section>

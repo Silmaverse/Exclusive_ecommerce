@@ -2,7 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import Text from '../../utill/Text'
 
-const Carttotal = () => {
+const Carttotal = ({subtotal}) => {
+
+    
   return (
     <>
     <div className="mt-20 flex justify-between items-center">
@@ -21,7 +23,7 @@ const Carttotal = () => {
             <Text variant='h4' classname='text-black'>Cart Total</Text>
             <div className="flex justify-between mt-6 pb-4 border-b border-b-black/40">
                 <Text variant='h4' classname='font-normal!'>Subtotal:</Text>
-                <Text variant='h4' classname='font-normal!'>$1750</Text>
+                <Text variant='h4' classname='font-normal!'>${subtotal}</Text>
             </div>
              <div className="flex justify-between mt-6 pb-4 border-b border-b-black/40">
                 <Text variant='h4' classname='font-normal!'>Shipping:</Text>
@@ -29,7 +31,7 @@ const Carttotal = () => {
             </div>
             <div className="flex justify-between mt-6 pb-4 ">
                 <Text variant='h4' classname='font-normal!'>Total:</Text>
-                <Text variant='h4' classname='font-normal!'>$1750</Text>
+                <Text variant='h4' classname='font-normal!'>${subtotal}</Text>
             </div>
             <Link href={"/checkout"} className='flex  justify-center items-center mx-auto w-[260px] h-14 rounded-sm bg-brand 
             text-base font-popins font-medium text-white '>Procees to checkout</Link>

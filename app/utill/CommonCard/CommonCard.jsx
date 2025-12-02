@@ -5,9 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiEye } from "react-icons/fi";
 import Carddetails from "../CommonCard/Carddetails";
-import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
-import { Slide, toast } from "react-toastify";
+import { Bounce, Slide, toast } from "react-toastify";
 
 const CommonCard = ({
   id,
@@ -21,18 +20,16 @@ const CommonCard = ({
   newarrival,
   colorvalues,
 }) => {
-
   function randomNumber() {
     let num = Math.floor(Math.random() * 30) + 1;
     return num;
   }
- 
 
   let productsarray = [];
 
-  Cookies.set("userId", randomNumber(), { expires: 1});
   const handleAdd = (productId) => {
-   
+    Cookies.set("userId", randomNumber(), { expires: 20 / 1440 });
+
     console.log(productId);
 
     const myproduct = {
@@ -63,16 +60,24 @@ const CommonCard = ({
           transition: Slide,
         })
       )
-      .catch((err) => console.log(err));
-
-
+      .catch((err) =>
+        toast.error("Error in Cart Adding", {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        })
+      );
   };
 
   return (
     <>
-      
       <div className="card w-[300px]   ">
-        
         <div className="image w-[300px]  h-[300px] bg-[#F5F5F5] relative overflow-hidden group flex justify-center items-center ">
           {discount && (
             <div

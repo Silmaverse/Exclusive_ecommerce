@@ -3,39 +3,64 @@ import React, { useEffect, useState } from "react";
 import Text from "../../utill/Text";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
+import Cookies from "js-cookie";
 import { IoChevronUp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import Cookies from "js-cookie";
-import Item from "antd/es/list/Item";
+import Carttotal from "./Carttotal";
+import Cartbtn from "./Cartbtn";
+import { Bounce, toast } from "react-toastify";
 
 const Carddetails = ({}) => {
+
+  // state varaible
   const [count, setCount] = useState({});
   const [products, setProducts] = useState([]);
-  const[subtotal ,setsubtotal]=useState(0)
+  const [subtotal, setsubtotal] = useState(0);
 
+  // userid from cookies
   const userid = Cookies.get("userId");
 
+  // getting cart items
   useEffect(() => {
     if (!userid) return;
     fetch(`https://dummyjson.com/carts/${userid}`)
       .then((res) => res.json())
       .then((res) => setProducts(res.products))
-      .catch((err)=>console.log(err))
+      .catch((err) => console.log(err));
   }, []);
 
-  console.log(products);
+  console.log(products)
 
-  useEffect(()=>{
-    if (products?.length===0) return
-    let sum=0
-    products.forEach((p)=>
-      sum+=p.total
-    )
-    setsubtotal(sum)
-  },[products])
+  //delete item
+  const handleDelete = (pId) => {
+    fetch(`https://dummyjson.com/carts/${userid}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then( toast.success("Cart deleted Successfully", {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        }))
+      .catch((err)=>console.log(err))
+      setProducts((prev)=> prev.filter((item)=>item.id!==pId))
+  };
 
-  console.log(subtotal)
+  // calculating total price
+  useEffect(() => {
+    if (products?.length === 0) return;
+    let sum = 0;
+    products.forEach((p) => (sum += p.total));
+    setsubtotal(sum.toFixed(2));
+  }, [products]);
 
+  //setting  count with quantity
   useEffect(() => {
     if (products?.length === 0) return;
     const qtyobj = {};
@@ -46,26 +71,39 @@ const Carddetails = ({}) => {
     setCount(qtyobj);
   }, [products]);
 
-  const handleChange = (id ,e) => {
+  //updating input value || quantity
+  const handleChange = (id, e) => {
     const val = e.target.value;
-    setCount((prev)=>({
-      ...prev,[id]:val===""?"":Number(val)
-    }))
+    setCount((prev) => ({
+      ...prev,
+      [id]: val === "" ? "" : Number(val),
+    }));
   };
-  const increase=(id)=>{
-    setCount((prev)=>({
-      ...prev ,[id]:prev[id]+1
-    }))
-  }
-    const decrease=(id)=>{
-    setCount((prev)=>({
-      ...prev ,[id]:Math.max(1 ,prev[id]-1)
-    }))
-  }
+  //increasing quantity
+  const increase = (id) => {
+    setCount((prev) => {
+      const updated = { ...prev, [id]: prev[id] + 1 };
 
-
-
-
+      let sum = 0;
+      products.forEach((p) => {
+        sum += p.price * updated[p.id];
+      });
+      setsubtotal(sum.toFixed(2));
+      return updated;
+    });
+  };
+  //decreasing quantity
+  const decrease = (id) => {
+    setCount((prev) => {
+      const updated = { ...prev, [id]: Math.max(1, prev[id] - 1) };
+      let sum = 0;
+      products.forEach((p) => {
+        sum += p.price * updated[p.id];
+      });
+      setsubtotal(sum.toFixed(2));
+      return updated;
+    });
+  };
 
   return (
     <>
@@ -86,7 +124,10 @@ const Carddetails = ({}) => {
                         fill={true}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
-                      <button className="hidden w-6 h-6 bg-brand text-white group-hover:flex justify-center items-center rounded-full absolute -left-2 -top-1.5">
+                      <button
+                        onClick={()=>handleDelete(item.id)}
+                        className="hidden w-6 h-6 bg-brand text-white group-hover:flex justify-center items-center rounded-full absolute -left-2 -top-1.5"
+                      >
                         <RxCross2 />
                       </button>
                     </div>
@@ -104,7 +145,7 @@ const Carddetails = ({}) => {
                   <div className="w-[72px] h-11 border-[1.5px] border-black/40 flex justify-center items-center pt-1.5 px-3">
                     <input
                       type="number"
-                      value={count[item.id]||1}
+                      value={count[item.id] || 1}
                       onChange={(e) => handleChange(item.id, e)}
                       className="border-none outline-none w-full"
                     />
@@ -112,11 +153,7 @@ const Carddetails = ({}) => {
                       <button onClick={() => increase(item.id)}>
                         <IoChevronUp />
                       </button>
-                      <button
-                        onClick={() =>
-                          decrease(item.id)
-                        }
-                      >
+                      <button onClick={() => decrease(item.id)}>
                         <IoIosArrowDown />
                       </button>
                     </div>
@@ -124,7 +161,7 @@ const Carddetails = ({}) => {
                 </td>
                 <td>
                   <Text variant="h4" classname="font-normal!">
-                    ${item.total}
+                    ${(count[item.id] * item.price).toFixed(2)}
                   </Text>
                 </td>
               </tr>
@@ -132,6 +169,9 @@ const Carddetails = ({}) => {
           </table>
         </div>
       ))}
+      <Cartbtn products={count} />
+
+      <Carttotal subtotal={subtotal} />
     </>
   );
 };
