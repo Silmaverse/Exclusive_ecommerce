@@ -8,7 +8,7 @@ const Category = () => {
     <>
 
     <section className='mt-20'>
-        <div className="container">
+        <div className="container  lg:px-20">
             <CommonSectionhead title={"Categories"} />
 
             <div className="mt-5 mb-15">

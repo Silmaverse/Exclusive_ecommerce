@@ -9,7 +9,7 @@ const FlashSale = () => {
   return (
     <>
       <section className="mt-36">
-        <div className="container">
+        <div className="container  lg:px-20">
           <CommonSectionhead title={"Today’s"} />
 
           <div className="s_row mt-6 flex gap-[87px] items-end mb-10 ">

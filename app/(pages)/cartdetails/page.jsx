@@ -12,7 +12,7 @@ const page = () => {
   return (
     <>
     <section id='cart'>
-        <div className="container">
+        <div className="container lg:px-20">
           <Homebreadcrumbs title={"Cart"}/>
           <Cardhead/>
           <Carddetails  />

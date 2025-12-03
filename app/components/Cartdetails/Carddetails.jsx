@@ -9,27 +9,30 @@ import { IoIosArrowDown } from "react-icons/io";
 import Carttotal from "./Carttotal";
 import Cartbtn from "./Cartbtn";
 import { Bounce, toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import {removeProduct, setProducts, settotal} from "../../lib/CartSlice"
 
 const Carddetails = ({}) => {
 
   // state varaible
   const [count, setCount] = useState({});
-  const [products, setProducts] = useState([]);
+
   const [subtotal, setsubtotal] = useState(0);
 
   // userid from cookies
   const userid = Cookies.get("userId");
+  const dispatch=useDispatch()
 
   // getting cart items
   useEffect(() => {
     if (!userid) return;
     fetch(`https://dummyjson.com/carts/${userid}`)
       .then((res) => res.json())
-      .then((res) => setProducts(res.products))
+      .then((res) =>(  dispatch(setProducts(res.products))))
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(products)
+const products=useSelector((state)=>state.cartdetails.products)
 
   //delete item
   const handleDelete = (pId) => {
@@ -49,7 +52,7 @@ const Carddetails = ({}) => {
           transition: Bounce,
         }))
       .catch((err)=>console.log(err))
-      setProducts((prev)=> prev.filter((item)=>item.id!==pId))
+       dispatch(removeProduct(pId))
   };
 
   // calculating total price
@@ -58,6 +61,7 @@ const Carddetails = ({}) => {
     let sum = 0;
     products.forEach((p) => (sum += p.total));
     setsubtotal(sum.toFixed(2));
+    dispatch(settotal(sum.toFixed(2)))
   }, [products]);
 
   //setting  count with quantity

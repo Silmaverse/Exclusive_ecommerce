@@ -37,7 +37,7 @@ const Navbar = () => {
 
         </div>
 
-        <div className="container">
+        <div className="container lg:px-20">
 
             <div className="navrow pt-10 pb-4 flex justify-between items-center ">
 

@@ -8,7 +8,7 @@ const BestSelling = () => {
   return (
     <>
       <section className="mt-[70px]">
-        <div className="container">
+        <div className="container  lg:px-20">
           <CommonSectionhead title={"This Month"} />
 
           <div className="flex justify-between

@@ -1,9 +1,20 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import Text from '../../utill/Text'
+import { useRouter } from 'next/navigation'
 
 const Carttotal = ({subtotal}) => {
 
+    const router=useRouter();
+
+   
+
+    
+ const handleCheck=()=>{
+        router.push('/checkout')
+
+    }
     
   return (
     <>
@@ -33,8 +44,8 @@ const Carttotal = ({subtotal}) => {
                 <Text variant='h4' classname='font-normal!'>Total:</Text>
                 <Text variant='h4' classname='font-normal!'>${subtotal}</Text>
             </div>
-            <Link href={"/checkout"} className='flex  justify-center items-center mx-auto w-[260px] h-14 rounded-sm bg-brand 
-            text-base font-popins font-medium text-white '>Procees to checkout</Link>
+            <button onClick={handleCheck} className='flex  justify-center items-center mx-auto w-[260px] h-14 rounded-sm bg-brand 
+            text-base font-popins font-medium text-white '>Procees to checkout</button>
         </div>
 
     </div>

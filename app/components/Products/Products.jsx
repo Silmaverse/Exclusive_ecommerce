@@ -9,7 +9,7 @@ const Products = () => {
     <>
     <section className='mt-[71px]'>
 
-        <div className="container">
+        <div className="container  lg:px-20">
             <CommonSectionhead  title={"Our Products"}  />
             <Text variant='h2' classname='mt-5 mb-15'>Explore Our Products</Text>
 

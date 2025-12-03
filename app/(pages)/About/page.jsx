@@ -9,7 +9,7 @@ const page = () => {
     <>
       <section id="about" className="mt-20">
         
-        <div className="container">
+        <div className="container lg:px-20">
           <div className="about ">
             <Homebreadcrumbs title={"About"} />
           </div>

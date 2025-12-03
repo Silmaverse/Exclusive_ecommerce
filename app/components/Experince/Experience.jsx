@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <>
     <section className='mt-35'>
-        <div className="container">
+        <div className="container  lg:px-20">
             <div className="experience_row w-full h-[550px]" style={{backgroundImage:`url(${Expereiencebanner.src})` 
             ,backgroundPosition:"center" ,backgroundSize:"cover" ,backgroundRepeat:"no-repeat"  }}>
 

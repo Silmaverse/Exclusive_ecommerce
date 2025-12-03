@@ -28,7 +28,7 @@ const CommonCard = ({
   let productsarray = [];
 
   const handleAdd = (productId) => {
-    Cookies.set("userId", randomNumber(), { expires: 20 / 1440 });
+    Cookies.set("userId", randomNumber(), { expires: 60 / 1440 });
 
     console.log(productId);
 

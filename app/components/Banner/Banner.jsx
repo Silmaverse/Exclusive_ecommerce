@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <>
     <section>
-        <div className="container">
+        <div className="container lg:px-20">
           <div className="banner_row  flex items-start gap-[50px]">
 
             <CategoryUl/>

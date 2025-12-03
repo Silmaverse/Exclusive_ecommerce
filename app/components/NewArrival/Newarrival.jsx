@@ -15,7 +15,7 @@ const Newarrival = () => {
 
     <section className='mt-35'>
 
-        <div className="container">
+        <div className="container  lg:px-20">
             <CommonSectionhead title={"Featured"}/>
 
             <Text variant='h2' classname='mt-5 mb-15'  >New Arrival</Text>

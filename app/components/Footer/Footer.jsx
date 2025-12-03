@@ -25,7 +25,7 @@ const Footer = () => {
     <>
     <footer className='mt-35 bg-black py-20 relative'>
 
-        <div className="container">
+        <div className="container lg:px-20">
 
       <div className="flex justify-between items-center">
 
